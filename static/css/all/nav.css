@@ -102,3 +102,59 @@ nav h2 {
 .menu_open {
   top: 0;
 }
+
+.nav__links {
+  display: none;
+}
+
+@media all and (min-width: 1025px) {
+  .burger {
+    display: none;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    width: 100%;
+    height: 11vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8% 0 8%;
+  }
+
+  .nav__headline {
+    text-decoration: none;
+    color: var(--secondary-color);
+  }
+
+  nav h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    position: relative;
+    z-index: 16;
+  }
+
+  .nav__links {
+    display: initial;
+  }
+
+  .nav__links li {
+    display: inline-block;
+    margin-left: 1.87rem;
+    font-size: 0.81rem;
+    position: relative;
+  }
+
+  .nav__links li:hover > a {
+    color: #fff;
+  }
+
+  .nav__links a {
+    transition: ease 300ms;
+    text-decoration: none;
+    color: #cccccc;
+  }
+}
