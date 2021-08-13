@@ -21,6 +21,7 @@ body {
 button {
   outline: none;
   cursor: pointer;
+  transition: ease 300ms;
 }
 
 button:focus {
