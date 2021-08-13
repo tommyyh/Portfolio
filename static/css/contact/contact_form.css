@@ -1,0 +1,86 @@
+.contact {
+  padding: 8.8rem 0 0 7%;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  line-height: 2.75rem;
+}
+
+.contact h2::before {
+  content: '02';
+  font-family: var(--font-family2);
+  position: absolute;
+  font-weight: 100;
+  font-size: 1.42rem;
+  margin-top: -10%;
+}
+
+.contact h2 span {
+  display: block;
+}
+
+.contact__forms {
+  margin-top: 1.2rem;
+}
+
+.contact__form {
+  position: relative;
+}
+
+.contact__form label {
+  position: absolute;
+  top: 46%;
+  margin-left: 4%;
+  font-size: 0.81rem;
+  color: #cfcfcf;
+}
+
+.contact__form_textarea label {
+  position: absolute;
+  margin-left: 4%;
+  font-size: 0.81rem;
+  color: #cfcfcf;
+  top: 19%;
+}
+
+.contact__form input {
+  width: 80%;
+  height: 3rem;
+  background: #222222;
+  color: #cfcfcf;
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  padding: 0 4% 0 4%;
+  font-weight: 300;
+}
+
+.contact__form_textarea {
+  position: relative;
+}
+
+.contact__form_textarea textarea {
+  width: 80%;
+  height: 7.5rem;
+  background: #222222;
+  color: #e4e4e4;
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  padding: 3% 4% 0 4%;
+  outline: none;
+  font-weight: 300;
+  font-family: var(--font-family);
+}
+
+.contact button {
+  font-size: 0.96rem;
+  font-weight: 400;
+  color: #fff;
+  width: 46%;
+  border: none;
+  height: 3rem;
+  background: var(--accent-color);
+  margin-top: 1.2rem;
+}

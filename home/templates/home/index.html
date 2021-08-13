@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static '/css/home/home.css' %}" />
+    <script src="{% static 'js/home/home.js' %}" defer></script>
+    <script src="{% static 'js/home/projects.js' %}" defer></script>
+    <script src="{% static 'js/all/nav.js' %}" defer></script>
+    <title>Tommy Hoang</title>
+  </head>
+  <body>
+    {% include 'home/nav.html' %}
+
+    <section class="hero">
+      <h1>
+        <span><u>UNIQUELLY</u> </span
+        ><span>AND <u>BEAUTIFULLY</u> DESIGNED WEB APPLICATIONS</span>
+      </h1>
+
+      <button>See My Projects</button>
+      <p>
+        A freelancer and a full stack web developer that focuses on making well
+        designed and beautiful websites.
+      </p>
+    </section>
+
+    <section class="wid">{% include 'home/wid.html' %}</section>
+
+    <main class="projects">{% include 'home/projects.html' %}</main>
+
+    <section class="contact_prompt">{% include 'home/contact.html' %}</section>
+
+    <footer class="footer">{% include 'home/footer.html' %}</footer>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #111111;
+  --secondary-color: #fff;
+  --accent-color: #ff8e3d;
+  --font-family: 'Montserrat', sans-serif;
+  --font-family2: 'Playfair Display', serif;
+}
+
+body {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  font-family: var(--font-family);
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: initial;
+}
+
+input {
+  outline: none;
+}
+
+input:focus {
+  outline: initial;
+}
+
+textarea {
+  resize: none;
+}

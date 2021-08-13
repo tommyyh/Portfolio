@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static '/css/contact/contact.css' %}" />
+    <script src="{% static 'js/all/nav.js' %}" defer></script>
+    <title>Tommy Hoang • Contact Me</title>
+  </head>
+  <body>
+    {% include 'home/nav.html' %}
+
+    <section class="hero">
+      <h1>
+        <span><u>GET IN TOUCH</u></span
+        ><span> WITH ME</span>
+      </h1>
+      <h4>Email Me: <span>tommyyhoangg@gmail.com</span></h4>
+    </section>
+
+    <section class="socials">{% include 'contact/socials.html' %}</section>
+
+    <main class="contact">{% include 'contact/contact_form.html' %}</main>
+
+    <footer class="footer">{% include 'home/footer.html' %}</footer>
+  </body>
+</html>

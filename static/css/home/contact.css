@@ -1,0 +1,46 @@
+.contact_prompt {
+  padding: 11rem 7% 0 7%;
+}
+
+.contact_prompt h2 {
+  font-size: 2.18rem;
+  line-height: 2.9rem;
+}
+
+.contact_prompt h2::before {
+  content: '04';
+  font-family: var(--font-family2);
+  position: absolute;
+  font-weight: 100;
+  font-size: 1.32rem;
+  margin-top: -11%;
+}
+
+.contact_prompt h2::after {
+  content: '';
+  position: absolute;
+  width: 68%;
+  height: 1.25px;
+  background: #5b5b5b;
+  left: 0;
+  margin-top: 3.7rem;
+}
+
+.contact_prompt p {
+  font-size: 0.9rem;
+  color: #dbdbdb;
+  line-height: 1.6rem;
+  margin-right: 7%;
+  margin-top: 2.8rem;
+}
+
+.contact_prompt button {
+  height: 3rem;
+  width: 10.5rem;
+  background: var(--accent-color);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 2rem;
+  color: #fff;
+  border: none;
+}

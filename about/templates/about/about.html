@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static '/css/about/about.css' %}" />
+    <script src="{% static 'js/all/nav.js' %}" defer></script>
+    <title>Tommy Hoang • About</title>
+  </head>
+  <body>
+    {% include 'home/nav.html' %}
+
+    <section class="hero">
+      <h1><u>TOMMY HOANG</u> - WEB DEVELOPER AND FREELANCER</h1>
+      <h4>About Me</h4>
+      <h3>GET TO KNOW ME BETTER</h3>
+    </section>
+
+    <section class="info">{% include 'about/info.html' %}</section>
+
+    <section class="strengths">{% include 'about/strengths.html' %}</section>
+
+    <main class="skills">{% include 'about/skills.html' %}</main>
+
+    <section class="contact_prompt">{% include 'home/contact.html' %}</section>
+
+    <footer class="footer">{% include 'home/footer.html' %}</footer>
+  </body>
+</html>

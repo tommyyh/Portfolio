@@ -1,0 +1,52 @@
+.wid {
+  padding: 11rem 0 0 7%;
+}
+
+.wid h2 {
+  font-size: 2.18rem;
+  position: relative;
+  margin-left: 9%;
+}
+
+.wid h2::before {
+  content: '02';
+  font-family: var(--font-family2);
+  position: absolute;
+  font-weight: 100;
+  font-size: 1.25rem;
+  left: -9.7%;
+  top: -7.5%;
+}
+
+.wid_cards_p {
+  overflow-x: scroll;
+}
+
+.wid_cards {
+  width: 185vw;
+}
+
+.wid_cards:first-child {
+  margin-top: 1.55rem;
+}
+
+.wid_cards span {
+  display: flex;
+  margin-top: 0.8rem;
+}
+
+.wid_card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 13.43rem;
+  height: 3.43rem;
+  background: #292929;
+  margin-right: 0.8rem;
+}
+
+.wid_card h4 {
+  color: #e7e7e7;
+  font-size: 1rem;
+  font-weight: 400;
+}

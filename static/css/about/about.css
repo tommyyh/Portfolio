@@ -1,0 +1,50 @@
+@import url('../all/nav.css');
+@import url('../all/resets.css');
+@import url('../all/footer.css');
+@import url('./info.css');
+@import url('./strengths.css');
+@import url('./skills.css');
+@import url('../home/contact.css');
+
+.hero {
+  padding: 28vh 0 0 7%;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  line-height: 2.8rem;
+}
+
+.hero h1::before {
+  content: '01';
+  font-family: var(--font-family2);
+  position: absolute;
+  font-weight: 200;
+  font-size: 1.7rem;
+  margin-top: -12%;
+}
+
+.hero h4 {
+  font-size: 1.1rem;
+  color: var(--accent-color);
+  font-weight: 300;
+  margin: 1.2rem 0 0 13%;
+  position: relative;
+}
+
+.hero h4::before {
+  content: '';
+  position: absolute;
+  width: 2rem;
+  height: 1px;
+  bottom: 50%;
+  left: -15%;
+  background: var(--accent-color);
+}
+
+.hero h3 {
+  font-size: 1.625rem;
+  color: #484848;
+  font-weight: 300;
+  margin: 3rem 0 0 0%;
+}
