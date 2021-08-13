@@ -92,3 +92,12 @@
   background: var(--accent-color);
   margin-top: 1.2rem;
 }
+
+#success {
+  color: #17dd52;
+  font-weight: 100;
+  font-size: 1rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.5rem;
+  display: none;
+}

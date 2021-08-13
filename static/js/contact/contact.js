@@ -1,3 +1,7 @@
+// Append CSRF token on every request
+axios.defaults.xsrfCookieName = 'csrftoken';
+axios.defaults.xsrfHeaderName = 'X-CSRFToken';
+
 (() => {
   const getElemet = (className) => {
     const element = document.querySelector(className);
@@ -18,6 +22,10 @@
     nameLabel.style.top = '31%';
     nameLabel.style.color = '#acacac';
     nameLabel.style.fontSize = '0.55rem';
+
+    nameLabel.style.color = 'rgb(230, 230, 230)';
+    nameLabel.innerHTML = 'Full Name';
+    nameInput.style.border = 'none';
   });
 
   nameInput.addEventListener('focusout', () => {
@@ -32,6 +40,10 @@
     emailLabel.style.top = '31%';
     emailLabel.style.color = '#acacac';
     emailLabel.style.fontSize = '0.55rem';
+
+    emailLabel.style.color = 'rgb(230, 230, 230)';
+    emailLabel.innerHTML = 'Email Address';
+    emailInput.style.border = 'none';
   });
 
   emailInput.addEventListener('focusout', () => {
@@ -46,6 +58,10 @@
     msgLabel.style.top = '18%';
     msgLabel.style.color = '#acacac';
     msgLabel.style.fontSize = '0.55rem';
+
+    msgLabel.style.color = 'rgb(230, 230, 230)';
+    msgLabel.innerHTML = 'Your Message';
+    msgInput.style.border = 'none';
   });
 
   msgInput.addEventListener('focusout', () => {
@@ -81,5 +97,56 @@
 
       return;
     }
+
+    (async () => {
+      button.innerHTML = 'Sending...';
+
+      const res = await axios.post(
+        'http://localhost:5000/contact/send-message/',
+        {
+          name: nameInput.value,
+          email: emailInput.value,
+          msg: msgInput.value,
+        }
+      );
+
+      if (res.data.status === 400) {
+        emailLabel.style.color = '#FF3C3C';
+        emailLabel.innerHTML = 'Email does not exist';
+        emailInput.style.border = '0.5px solid #FF3C3C';
+
+        return;
+      }
+
+      if (res.data.status === 200) {
+        nameInput.value = '';
+        emailInput.value = '';
+        msgInput.value = '';
+
+        emailLabel.style.top = '46%';
+        emailLabel.style.color = '#e6e6e6';
+        emailLabel.style.fontSize = '0.81rem';
+
+        nameLabel.style.top = '46%';
+        nameLabel.style.color = '#e6e6e6';
+        nameLabel.style.fontSize = '0.81rem';
+
+        msgLabel.style.top = '19%';
+        msgLabel.style.color = '#e6e6e6';
+        msgLabel.style.fontSize = '0.81rem';
+
+        button.innerHTML = 'Send Message';
+
+        // Show success message
+        const success = getElemet('#success');
+
+        success.style.display = 'initial';
+
+        // Unshow message after 4 seconds
+        setTimeout(() => {
+          success.style.display = 'none';
+        }, 4000);
+      }
+    })();
   });
 })();
