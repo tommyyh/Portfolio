@@ -48,3 +48,52 @@
   font-weight: 300;
   margin: 3rem 0 0 0%;
 }
+
+@media all and (min-width: 1025px) {
+  .hero {
+    padding: 22vh 0 0 7%;
+  }
+
+  .hero h1 {
+    margin-left: 7.88%;
+    font-size: 5rem;
+    line-height: 6.18rem;
+  }
+
+  .hero h1 u,
+  .hero h1 span {
+    display: block;
+  }
+
+  .hero h1::before {
+    content: '01';
+    font-family: var(--font-family2);
+    position: absolute;
+    font-weight: 200;
+    font-size: 2.65rem;
+    margin-top: -1.88%;
+    margin-left: -6%;
+  }
+
+  .hero h4 {
+    font-size: 1.25rem;
+    color: var(--accent-color);
+    font-weight: 300;
+    margin: 3.9% 0 0 13%;
+    position: relative;
+  }
+
+  .hero h4::before {
+    content: '';
+    position: absolute;
+    width: 2.85rem;
+    height: 1px;
+    bottom: 50%;
+    left: -6%;
+    background: var(--accent-color);
+  }
+
+  .hero h3 {
+    display: none;
+  }
+}
