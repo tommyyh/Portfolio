@@ -9,7 +9,7 @@
 }
 
 .hero h1 {
-  font-size: 1.95rem;
+  font-size: 4rem;
   margin-bottom: 4.4rem;
 }
 
@@ -30,4 +30,36 @@
   background: #5b5b5b;
   left: 0;
   margin-top: 3.2rem;
+}
+
+@media all and (min-width: 1025px) {
+  .hero {
+    padding: 5rem 0 0 8%;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+    margin-bottom: 4.4rem;
+    margin-left: 4%;
+  }
+
+  .hero h1::before {
+    content: '01';
+    font-family: var(--font-family2);
+    position: absolute;
+    font-weight: 100;
+    font-size: 2rem;
+    margin-top: 0%;
+    margin-left: -4%;
+  }
+
+  .hero h1::after {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 1.05px;
+    background: #5b5b5b;
+    left: 0;
+    margin-top: 7.2%;
+  }
 }
