@@ -16,6 +16,22 @@ axios.defaults.xsrfHeaderName = 'X-CSRFToken';
   const emailLabel = getElemet('#email_label');
   const msgLabel = getElemet('#msg_label');
   const button = getElemet('.send_button');
+  const title = getElemet('#socials_title');
+
+  // Change the title on browser rezie (mobile, desktop, ...)
+  if (window.innerWidth > 1025) {
+    title.innerHTML = 'Socials & Informations';
+  }
+
+  const changeTitle = () => {
+    if (window.innerWidth > 1025) {
+      title.innerHTML = 'Socials & Informations';
+    } else {
+      title.innerHTML = 'Socials & Info';
+    }
+  };
+
+  window.addEventListener('resize', changeTitle);
 
   // Adjust floating labels on focus
   nameInput.addEventListener('focusin', () => {
@@ -23,7 +39,7 @@ axios.defaults.xsrfHeaderName = 'X-CSRFToken';
     nameLabel.style.color = '#acacac';
     nameLabel.style.fontSize = '0.55rem';
 
-    nameLabel.style.color = 'rgb(230, 230, 230)';
+    nameLabel.style.color = '#b9b9b9';
     nameLabel.innerHTML = 'Full Name';
     nameInput.style.border = 'none';
   });
@@ -41,7 +57,7 @@ axios.defaults.xsrfHeaderName = 'X-CSRFToken';
     emailLabel.style.color = '#acacac';
     emailLabel.style.fontSize = '0.55rem';
 
-    emailLabel.style.color = 'rgb(230, 230, 230)';
+    emailLabel.style.color = '#b9b9b9';
     emailLabel.innerHTML = 'Email Address';
     emailInput.style.border = 'none';
   });
@@ -59,7 +75,7 @@ axios.defaults.xsrfHeaderName = 'X-CSRFToken';
     msgLabel.style.color = '#acacac';
     msgLabel.style.fontSize = '0.55rem';
 
-    msgLabel.style.color = 'rgb(230, 230, 230)';
+    msgLabel.style.color = '#b9b9b9';
     msgLabel.innerHTML = 'Your Message';
     msgInput.style.border = 'none';
   });
@@ -114,6 +130,8 @@ axios.defaults.xsrfHeaderName = 'X-CSRFToken';
         emailLabel.style.color = '#FF3C3C';
         emailLabel.innerHTML = 'Email does not exist';
         emailInput.style.border = '0.5px solid #FF3C3C';
+
+        button.innerHTML = 'Send Message';
 
         return;
       }

@@ -41,3 +41,63 @@
   margin-top: 1.2rem;
   color: #cccccc;
 }
+
+@media all and (min-width: 1025px) {
+  .socials {
+    padding: 31vh 0 0 8%;
+  }
+
+  .socials h2 {
+    font-size: 2.5rem;
+  }
+
+  .socials_wrapper {
+    display: flex;
+  }
+
+  .socials h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 30%;
+    height: 1px;
+    background: #5b5b5b;
+    margin-top: 4.78%;
+  }
+
+  .socials_links li {
+    list-style-type: none;
+    font-size: 1rem;
+    margin-top: 1.2rem;
+  }
+
+  .socials_links a:hover {
+    color: #fff;
+  }
+
+  .socials_links li:first-child {
+    margin-top: 2.5rem;
+  }
+
+  .socials_links a {
+    text-decoration: none;
+    color: #cccccc;
+    transition: ease 300ms;
+  }
+
+  .socials_info {
+    margin-top: 0rem;
+    margin-left: 8%;
+  }
+
+  .socials_info li {
+    list-style-type: none;
+    font-size: 1rem;
+    margin-top: 1.2rem;
+    color: #cccccc;
+  }
+
+  .socials_info li:first-child {
+    margin-top: 2.5rem;
+  }
+}
