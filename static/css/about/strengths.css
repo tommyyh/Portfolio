@@ -132,3 +132,39 @@
     margin: 0.5rem 10% 0 10%;
   }
 }
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .strengths h2 {
+    font-size: 2.3rem;
+    position: relative;
+  }
+
+  .strengths h2::before {
+    content: '03';
+    font-family: var(--font-family2);
+    position: absolute;
+    font-weight: 200;
+    font-size: 1.25rem;
+    margin-left: -9.8%;
+    margin-top: -0.65%;
+  }
+
+  .strengths h2::after {
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: 1px;
+    background: var(--accent-color);
+    left: 43%;
+    margin-top: 3.5rem;
+  }
+
+  .strengths__card p {
+    font-size: 0.85rem;
+    line-height: 1.45rem;
+    font-weight: 200;
+    color: #b6b6b6;
+    text-align: center;
+    margin: 0.7rem 20% 0 20%;
+  }
+}

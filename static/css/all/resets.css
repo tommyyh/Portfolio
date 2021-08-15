@@ -43,3 +43,9 @@ textarea {
 textarea:focus {
   outline: initial;
 }
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 26px;
+  }
+}

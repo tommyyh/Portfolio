@@ -118,3 +118,9 @@
     margin-top: 0.6rem;
   }
 }
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .skills__cards {
+    width: 170vw;
+  }
+}

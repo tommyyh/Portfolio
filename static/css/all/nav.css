@@ -91,6 +91,7 @@ nav h2 {
   font-size: 3rem;
   margin-top: 0.9rem;
   position: relative;
+  list-style-type: none;
 }
 
 .menu li a {

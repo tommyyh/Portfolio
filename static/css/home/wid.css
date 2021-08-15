@@ -145,3 +145,9 @@
     font-weight: 400;
   }
 }
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .wid_cards {
+    width: 140vw;
+  }
+}
