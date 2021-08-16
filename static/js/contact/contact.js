@@ -115,14 +115,9 @@ axios.defaults.xsrfHeaderName = 'X-CSRFToken';
     }
 
     (async () => {
-      const url =
-        window.location.protocol === 'https:'
-          ? 'https://tommyhoang.herokuapp.com/contact/send-message/'
-          : 'http://tommyhoang.herokuapp.com/contact/send-message/';
-
       button.innerHTML = 'Sending...';
 
-      const res = await axios.post(url, {
+      const res = await axios.post('/contact/send-message/', {
         name: nameInput.value,
         email: emailInput.value,
         msg: msgInput.value,
