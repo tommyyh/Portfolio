@@ -27,6 +27,7 @@ def send_message(request):
   email.fail_silently = False
   
   try:
+    print('try')
     email.send()
   except SMTPException as e:
     print('There was an error sending an email: ', e) 
