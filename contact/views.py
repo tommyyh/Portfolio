@@ -3,7 +3,6 @@ from rest_framework.decorators import api_view
 from django.shortcuts import render
 from django.core.mail import EmailMessage
 from django.conf import settings
-from smtplib import SMTPException
 
 def contact(request):
   return render(request, 'contact/contact.html')
@@ -15,8 +14,6 @@ def send_message(request):
   msg = request.data['msg']
   body = f'Name: {name}, Email: {email_address}, Message: {msg}'
 
-  print('Before')
-
   email = EmailMessage(
     'Portfolio - Contact form (Project)',
     body,
@@ -25,12 +22,6 @@ def send_message(request):
   )
 
   email.fail_silently = False
-  
-  try:
-    print('try')
-    email.send()
-  except SMTPException as e:
-    print('There was an error sending an email: ', e) 
+  email.send()
 
-  print('After')
   return Response({ 'status': 200 })
