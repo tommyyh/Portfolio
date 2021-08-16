@@ -117,8 +117,8 @@ axios.defaults.xsrfHeaderName = 'X-CSRFToken';
     (async () => {
       const url =
         window.location.protocol === 'https:'
-          ? 'https://tommyhoang.herokuapp.com/'
-          : 'http://tommyhoang.herokuapp.com/';
+          ? 'https://tommyhoang.herokuapp.com/contact/send-message/'
+          : 'http://tommyhoang.herokuapp.com/contact/send-message/';
 
       button.innerHTML = 'Sending...';
 
