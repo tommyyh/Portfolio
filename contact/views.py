@@ -3,6 +3,7 @@ from rest_framework.decorators import api_view
 from django.shortcuts import render
 from django.core.mail import EmailMessage
 from django.conf import settings
+from smtplib import SMTPException
 
 def contact(request):
   return render(request, 'contact/contact.html')
@@ -24,7 +25,11 @@ def send_message(request):
   )
 
   email.fail_silently = False
-  email.send()
+  
+  try:
+    email.send()
+  except SMTPException as e:
+    print('There was an error sending an email: ', e) 
 
   print('After')
   return Response({ 'status': 200 })
