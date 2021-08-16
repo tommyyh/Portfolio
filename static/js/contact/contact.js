@@ -115,16 +115,18 @@ axios.defaults.xsrfHeaderName = 'X-CSRFToken';
     }
 
     (async () => {
+      const url =
+        window.location.protocol === 'https:'
+          ? 'https://tommyhoang.herokuapp.com/'
+          : 'http://tommyhoang.herokuapp.com/';
+
       button.innerHTML = 'Sending...';
 
-      const res = await axios.post(
-        'http://localhost:5000/contact/send-message/',
-        {
-          name: nameInput.value,
-          email: emailInput.value,
-          msg: msgInput.value,
-        }
-      );
+      const res = await axios.post(url, {
+        name: nameInput.value,
+        email: emailInput.value,
+        msg: msgInput.value,
+      });
 
       if (res.data.status === 400) {
         emailLabel.style.color = '#FF3C3C';
