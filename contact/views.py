@@ -14,6 +14,8 @@ def send_message(request):
   msg = request.data['msg']
   body = f'Name: {name}, Email: {email_address}, Message: {msg}'
 
+  print('Before')
+
   email = EmailMessage(
     'Portfolio - Contact form (Project)',
     body,
@@ -24,4 +26,5 @@ def send_message(request):
   email.fail_silently = False
   email.send()
 
+  print('After')
   return Response({ 'status': 200 })
