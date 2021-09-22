@@ -2,6 +2,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from django.shortcuts import render
 from django.core.mail import EmailMessage
+from smtplib import SMTPException
 from django.conf import settings
 
 def contact(request):

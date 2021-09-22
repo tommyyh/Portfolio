@@ -1,7 +1,9 @@
 from pathlib import Path
 import os
-from decouple import config
+import json
 
+with open('/etc/config.json') as config_file:
+    config_var = json.load(config_file)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -10,13 +12,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-jbuxf8ezk^ge76shj9)3%i&ld6@(2@_*7qsmr8n530dda-hmcn'
+SECRET_KEY = config_var['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['tommyhoang.herokuapp.com', 'localhost']
-
+ALLOWED_HOSTS = ['www.tommyhoang.me', 'tommyhoang.me', '80.85.87.164']
 
 # Application definition
 
@@ -127,7 +128,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_POST = 587
+EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = config('EMAIL')
-EMAIL_HOST_PASSWORD = config('PASSWORD')
+EMAIL_HOST_USER = config_var.get('EMAIL_USER')
+EMAIL_HOST_PASSWORD = config_var.get('EMAIL_PASS')
