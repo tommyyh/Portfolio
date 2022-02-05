@@ -41,7 +41,7 @@
   margin-top: 1.3rem;
 }
 
-.hero button::before {
+.hero_back {
   content: '';
   position: absolute;
   width: 80%;
@@ -114,10 +114,10 @@
   }
 
   .hero button:hover {
-    background: #ff7817;
+    background: #ff565e;
   }
 
-  .hero button::before {
+  .hero_back {
     content: '';
     position: absolute;
     width: 32.5%;

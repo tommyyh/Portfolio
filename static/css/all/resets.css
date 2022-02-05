@@ -7,7 +7,7 @@
 :root {
   --primary-color: #111111;
   --secondary-color: #fff;
-  --accent-color: #ff8e3d;
+  --accent-color: #fd434c;
   --font-family: 'Montserrat', sans-serif;
   --font-family2: 'Playfair Display', serif;
 }
@@ -16,12 +16,13 @@ body {
   background: var(--primary-color);
   color: var(--secondary-color);
   font-family: var(--font-family);
+  overflow-x: hidden;
 }
 
 button {
   outline: none;
   cursor: pointer;
-  transition: ease 300ms;
+  transition: 300ms linear;
 }
 
 button:focus {

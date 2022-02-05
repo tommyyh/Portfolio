@@ -165,3 +165,80 @@ axios.defaults.xsrfHeaderName = 'X-CSRFToken';
     })();
   });
 })();
+
+// Hero
+const hero = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.hero',
+    // start: 'center bottom',
+  },
+});
+
+hero.from('.hero h1 span, .hero h4', {
+  y: '50%',
+  duration: 0.62,
+  opacity: 0,
+  stagger: 0.22,
+});
+
+// Hero
+const socials = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.socials',
+    start: 'center bottom',
+  },
+});
+
+socials.from('.socials h2 span', {
+  y: '50%',
+  duration: 0.62,
+  opacity: 0,
+});
+
+socials.from(
+  '.socials_links li, .socials_info li',
+  {
+    y: '50%',
+    duration: 0.6,
+    opacity: 0,
+    stagger: 0.15,
+  },
+  '-=1'
+);
+
+// Hero
+const contact = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.contact',
+    start: 'center bottom',
+  },
+});
+
+contact.from('.contact h2 span', {
+  y: '50%',
+  duration: 0.62,
+  opacity: 0,
+  stagger: 0.2,
+});
+
+contact.from(
+  '#project_details li',
+  {
+    y: '50%',
+    duration: 0.62,
+    opacity: 0,
+    stagger: 0.2,
+  },
+  '-=0.3'
+);
+
+contact.from(
+  '.contact__form, .contact__form_textarea, .send_button',
+  {
+    y: '50%',
+    duration: 0.62,
+    opacity: 0,
+    stagger: 0.2,
+  },
+  '-=1'
+);

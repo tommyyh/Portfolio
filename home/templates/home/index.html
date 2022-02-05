@@ -13,6 +13,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="{% static '/css/home/home.css' %}" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"
+      defer
+    ></script>
     <script src="{% static 'js/home/home.js' %}" defer></script>
     <script src="{% static 'js/home/projects.js' %}" defer></script>
     <script src="{% static 'js/all/nav.js' %}" defer></script>
@@ -25,12 +33,14 @@
       <h1>
         <span><u>UNIQUELLY</u></span> <span>AND <u>BEAUTIFULLY</u></span>
         <span>DESIGNED WEB</span>
-        APPLICATIONS
+        <span>APPLICATIONS</span>
       </h1>
       <h4>Home</h4>
 
+      <div class="hero_back"></div>
+
       <button>See My Projects</button>
-      <p>
+      <p class="hero_p">
         A freelancer and a full stack web developer that focuses on making well
         designed and beautiful websites.
       </p>
